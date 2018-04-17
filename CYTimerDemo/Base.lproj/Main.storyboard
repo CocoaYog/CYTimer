@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CYTimerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFW-U2-14c">
+                                <rect key="frame" x="149" y="70" width="77" height="30"/>
+                                <state key="normal" title="暂停定时器"/>
+                                <connections>
+                                    <action selector="suspendTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWW-Ks-kxY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFy-VC-4Av">
+                                <rect key="frame" x="149" y="132" width="77" height="30"/>
+                                <state key="normal" title="启动定时器"/>
+                                <connections>
+                                    <action selector="resumeTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZzE-do-DZW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRE-aS-FFA">
+                                <rect key="frame" x="149" y="189" width="77" height="30"/>
+                                <state key="normal" title="取消定时器"/>
+                                <connections>
+                                    <action selector="cancelTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zbZ-H6-zt2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zaa-h3-h9g">
+                                <rect key="frame" x="133" y="244" width="108" height="30"/>
+                                <state key="normal" title="重设当前定时器"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ejM-fL-GwY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bRE-aS-FFA" firstAttribute="top" secondItem="eFy-VC-4Av" secondAttribute="bottom" constant="27" id="2iF-7c-nxt"/>
+                            <constraint firstItem="eFy-VC-4Av" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MEf-M5-jnc"/>
+                            <constraint firstItem="Zaa-h3-h9g" firstAttribute="top" secondItem="bRE-aS-FFA" secondAttribute="bottom" constant="25" id="RKP-oG-pHV"/>
+                            <constraint firstItem="yFW-U2-14c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b4s-nn-aw4"/>
+                            <constraint firstItem="yFW-U2-14c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="lHt-GW-J44"/>
+                            <constraint firstItem="eFy-VC-4Av" firstAttribute="top" secondItem="yFW-U2-14c" secondAttribute="bottom" constant="32" id="mjL-1o-8BD"/>
+                            <constraint firstItem="Zaa-h3-h9g" firstAttribute="centerX" secondItem="bRE-aS-FFA" secondAttribute="centerX" id="nOe-SV-hWo"/>
+                            <constraint firstItem="bRE-aS-FFA" firstAttribute="centerX" secondItem="eFy-VC-4Av" secondAttribute="centerX" id="sPK-S8-j3O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
